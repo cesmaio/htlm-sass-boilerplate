@@ -1,0 +1,186 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+:root {
+   /* --------------------------------
+      ## Typography and Spacing
+   -------------------------------- */
+   /* type offset */
+   --text-scale-size: 1px;
+
+   // large screens
+   /* type scale */
+   --text-h1-size: calc(48 * var(--text-scale-size));
+   --text-h2-size: calc(40 * var(--text-scale-size));
+   --text-h3-size: calc(32 * var(--text-scale-size));
+   --text-title-size: calc(24 * var(--text-scale-size));
+   --text-subtitle-size: calc(20 * var(--text-scale-size));
+   --text-body-size: calc(16 * var(--text-scale-size));
+   --text-standard-size: calc(14 * var(--text-scale-size));
+   --text-caption-size: calc(12 * var(--text-scale-size));
+
+   /* line-height */
+   --heading-line-height: 1.25;
+   --body-line-height: 1.5;
+
+   // small screens
+   @include media("<mobile") {
+      /* type scale */
+      --text-h1-size: calc(40 * var(--text-scale-size));
+      --text-h2-size: calc(32 * var(--text-scale-size));
+      --text-h3-size: calc(26 * var(--text-scale-size));
+      --text-title-size: calc(22 * var(--text-scale-size));
+      --text-subtitle-size: calc(18 * var(--text-scale-size));
+      --text-body-size: calc(16 * var(--text-scale-size));
+      --text-standard-size: calc(14 * var(--text-scale-size));
+      --text-caption-size: calc(12 * var(--text-scale-size));
+
+      /* line-height */
+      --heading-line-height: 1.5;
+      --body-line-height: 1.25;
+   }
+
+   // text size reference
+   --text-xxl: var(--text-h3-size);
+   --text-xl: var(--text-h4-size);
+   --text-l: var(--text-title-size);
+   --text-m: var(--text-body-size);
+   --text-s: var(--text-subtitle-size);
+   --text-xs: var(--text-caption-size);
+
+   /* spacing */
+   --space-unit: var(--text-m);
+
+   --space-xxs: calc(0.25 * var(--space-unit));
+   --space-xs: calc(0.5 * var(--space-unit));
+   --space-s: calc(0.8 * var(--space-unit));
+   --space-m: calc(1.3 * var(--space-unit));
+   --space-l: calc(2 * var(--space-unit));
+   --space-xl: calc(3 * var(--space-unit));
+   --space-xxl: calc(4 * var(--space-unit));
+   --space-S: calc(5 * var(--space-unit));
+   --space-M: calc(6 * var(--space-unit));
+   --space-L: calc(8 * var(--space-unit));
+
+   /* ### font weight */
+   --thin: 100;
+   --extraLight: 200;
+   --light: 300;
+   --normal: 400;
+   --medium: 500;
+   --semiBold: 600;
+   --bold: 700;
+   --extraBold: 800;
+   --heavy: 900;
+
+   /* --------------------------------
+   ## Colors
+   -------------------------------- */
+
+   // primary
+   --c-primary: #5f2eea;
+   --c-primary-light: tint(--c-primary, 15%);
+   --c-primary-dark: shade(--c-primary, 15%);
+   --c-primary-bg: rgba(--c-primary, 20%);
+   --c-primary-backdrop: rgba(--c-primary, 85%);
+   --c-primary-overlay: rgba(--c-primary, 15%);
+
+   // accent
+   --c-accent: #caf11c;
+   --c-accent-light: tint(--c-accent, 15%);
+   --c-accent-dark: shade(--c-accent, 15%);
+   --c-accent-bg: rgba(--c-accent, 20%);
+   --c-accent-backdrop: rgba(--c-accent, 85%);
+   --c-accent-overlay: rgba(--c-accent, 40%);
+
+   // secondary
+   --c-secondary: #1cc8ee;
+   --c-secondary-light: tint(--c-secondary, 15%);
+   --c-secondary-dark: shade(--c-secondary, 15%);
+   --c-secondary-bg: rgba(--c-secondary, 20%);
+   --c-secondary-backdrop: rgba(--c-secondary, 85%);
+   --c-secondary-overlay: rgba(--c-secondary, 25%);
+
+   // grayscale 1
+
+   // --black: #1d1d21;
+   // --gray9: #212125;
+   // --gray8: #2a2a2f;
+   // --gray7: #3c3c44;
+   // --gray6: #53535f;
+   // --gray5: #6b6b7a;
+   // --gray4: #858594;
+   // --gray3: #a0a0ac;
+   // --gray2: #bbbbc3;
+   // --gray1: #d6d6db;
+   // --gray0: #f1f1f3;
+   // --white: #f7f7fc;
+
+   // grayscale 2
+   ///@author GitLab
+   ///@link https://design.gitlab.com/product-foundations/colors
+
+   --black: #000;
+   --gray95: #1f1f1f;
+   --gray9: #303030;
+   --gray8: #404040;
+   --gray7: #525252;
+   --gray6: #5e5e5e;
+   --gray5: #666666;
+   --gray4: #868686;
+   --gray3: #999999;
+   --gray2: #bfbfbf;
+   --gray1: #dbdbdb;
+   --gray05: #f0f0f0;
+   --gray0: #fafafa;
+   --white: #fff;
+
+   // feedback
+   --c-success: #88c459;
+   --c-error: #f5414f;
+   --c-warning: #ffd137;
+   --c-info: #30acdd;
+
+   /* --------------------------------
+   ## Icons
+   -------------------------------- */
+
+   --icon-xs: 16px;
+   --icon-s: 24px;
+   --icon-m: 32px;
+   --icon-l: 48px;
+   --icon-xl: 64px;
+
+   /* --------------------------------
+   ## Border radius
+   -------------------------------- */
+
+   --br-xs: 2px;
+   --br-s: 4px;
+   --br-m: 8px;
+   --br-l: 12px;
+   --br-xl: 20px;
+   --br-xxl: 32px;
+
+   // ### content max width
+   --max-width: 1180px;
+}
+
+/// Breakpoints map, overwrite breakpoints in "_include-media.scss"
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+   "mobile-s": 320px,
+   "mobile-m": 375px,
+   "mobile-l": 425px,
+   "mobile": 640px,
+   "tablet": 768px,
+   "desktop": 1024px,
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: "/assets/" !default;

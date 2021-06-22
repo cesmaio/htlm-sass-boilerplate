@@ -1,0 +1,33 @@
+.basic-btn {
+   display: inline-flex;
+   position: relative;
+   white-space: nowrap;
+   text-decoration: none;
+   line-height: 1;
+
+   border-radius: var(--br-m);
+   font-size: var(--text-standard);
+   color: var(--c-link);
+}
+
+.btn {
+   @extend .basic-btn;
+   padding: var(--space-xs) var(--space-s);
+}
+
+.link_btn {
+   @extend .basic-btn;
+   align-items: center;
+   background: var(--c-link);
+   padding: var(--space-xxs) var(--space-xs);
+   font-size: var(--text-m);
+
+   @include on-event {
+      text-decoration: none;
+   }
+
+   // secondary
+   &-secondary {
+      background-color: var(--c-secondary);
+   }
+}

@@ -1,0 +1,78 @@
+body {
+   font-family: $font-primary;
+   font-weight: var(--medium);
+   font-size: var(--text-body-size);
+   color: var(--c-text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+form legend {
+   margin-bottom: var(--space-xxs);
+   line-height: var(--heading-line-height);
+   color: var(--c-title);
+}
+.title {
+   color: var(--c-text-title);
+   line-height: var(--heading-line-height);
+}
+.subtitle {
+   color: var(--c-text-subtitle);
+}
+
+/* text size and weight */
+h1 {
+   font-size: var(--text-h1-size);
+   font-weight: var(--extraBold);
+}
+h2 {
+   font-size: var(--text-h2-size);
+   font-weight: var(--bold);
+}
+h3 {
+   font-size: var(--text-h3-size);
+   font-weight: var(--semiBold);
+}
+h4 {
+   font-size: var(--text-h4-size);
+   font-weight: var(--semiBold);
+}
+
+small,
+caption {
+   font-size: var(--text-caption-size);
+   font-weight: var(--light);
+}
+
+.text-xs {
+   font-size: var(--text-xs);
+}
+
+p {
+   line-height: var(--body-line-height);
+}
+
+span {
+   font-family: inherit;
+}
+
+b,
+strong {
+   font-weight: var(--bold);
+   font-family: inherit;
+}
+
+/* paragraph spacings */
+article {
+   p {
+      margin: var(--space-xs) 0;
+      &:first-of-type {
+         margin-top: var(--space-m);
+      }
+      &:last-of-type {
+         margin-bottom: var(--space-l);
+      }
+   }
+}

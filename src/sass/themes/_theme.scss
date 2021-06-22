@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// Specific theme stuff is in separate file (eg. "_light.scss", "_dark.scss")
+// -----------------------------------------------------------------------------
+:root {
+   /* typography */
+   --c-text-primary: var(--gray8); // copy text
+   --c-text-secondary: var(--gray6); // copy text secondary
+   --c-text-placeholder: var(--gray4); // copy text for inputs
+   --c-title: var(--black); // headings and titles
+   --c-subtitle: var(--gray9); // subheadings and subtitles
+
+   --c-text-primary-invert: var(--gray1);
+   --c-text-secondary-invert: var(--gray3);
+   --c-text-placeholder-invert: var(--gray5);
+   --c-title-invert: var(--white);
+   --c-subtitle-invert: var(--gray0);
+
+   --c-caption: var(--c--text-secondary); // caption and label text
+   --c-link: var(--c-primary);
+   --c-link-visited: var(--c-primary-dark);
+   --c-mark: var(--c-secondary-bg);
+   --c-blockquote-border: var(--gray2);
+
+   /* border */
+   --c-border: var(--gray3);
+   --c-border-focus: var(--c-primary);
+
+   /* background */
+   --c-bg: var(--gray0); // main background
+   --c-bg1: var(--gray0);
+   --c-bg2: var(--gray1);
+   --c-bg3: var(--gray2);
+   --c-bg4: var(--gray3);
+   --c-bg5: var(--gray4);
+
+   /* buttons */
+   --c-btn-primary-bg: var(--c-primary);
+   --c-btn-primary-hover: var(--c-primary-light);
+   --c-btn-primary-active: var(--c-primary-dark);
+   --c-btn-primary-label: var(--white);
+
+   /* icons */
+   --c-icon-primary: var(--gray8);
+   --c-icon-primary-invert: var(--gray2);
+   --c-icon-secondary: inherit;
+
+   /* forms */
+   --c-input-bg: var(--gray1); // input field background
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@import "vendors/normalize", "vendors/include-media";
+
+// 2. Configuration and helpers
+@import "utilities/variables", "utilities/functions", "utilities/mixins",
+   "utilities/animation";
+
+// 3. Base stuff
+@import "base/base", "base/fonts", "base/typography", "base/icons",
+   "base/helpers";
+// Base elements
+@import "base/elements/buttons", "base/elements/fields", "base/elements/hr",
+   "base/elements/links", "base/elements/lists", "base/elements/media",
+   "base/elements/tables";
+
+// 4. Layout-related sections
+@import "layout/header", "layout/footer";
+
+// 5. Components
+@import "components/tooltip";
+
+// 6. Page-specific styles
+@import "pages/home";
+
+// 7. Themes
+@import "themes/default";
