@@ -1,0 +1,9 @@
+{
+   "liveSassCompile.settings.formats": [
+      {
+         "format": "compact", // expanded, compact, compressed, nested
+         "extensionName": ".css",
+         "savePath": "/public/css" // all files in the common css folder
+      }
+   ]
+}
