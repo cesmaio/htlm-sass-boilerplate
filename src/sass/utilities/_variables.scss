@@ -2,6 +2,24 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+/// Breakpoints map, overwrite breakpoints in "_include-media.scss"
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+   "mobile-s": 320px,
+   "mobile-m": 375px,
+   "mobile-l": 425px,
+   "mobile": 640px,
+   "tablet": 768px,
+   "desktop": 1024px,
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: "/assets/" !default;
+
 :root {
    /* --------------------------------
       ## Typography and Spacing
@@ -166,21 +184,3 @@
    // ### content max width
    --max-width: 1180px;
 }
-
-/// Breakpoints map, overwrite breakpoints in "_include-media.scss"
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-$breakpoints: (
-   "mobile-s": 320px,
-   "mobile-m": 375px,
-   "mobile-l": 425px,
-   "mobile": 640px,
-   "tablet": 768px,
-   "desktop": 1024px,
-);
-
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: "/assets/" !default;

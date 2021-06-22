@@ -49,3 +49,7 @@
    /* forms */
    --c-input-bg: var(--gray1); // input field background
 }
+
+::selection {
+   background-color: var(--c-btn-primary-light);
+}

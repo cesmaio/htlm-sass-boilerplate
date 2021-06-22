@@ -94,7 +94,7 @@ abbr[title] {
 
 b,
 strong {
-   font-weight: $extraBold;
+   font-weight: var(--extraBold);
 }
 
 /**
