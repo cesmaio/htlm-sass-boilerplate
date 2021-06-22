@@ -1,5 +1,7 @@
 # HTML5 and Sass Boilerplate
 
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/h5bp/html5-boilerplate/blob/master/LICENSE.txt)
+
 This is a simple front-end template for building static sites or simple web apps.
 
 ## How to use
