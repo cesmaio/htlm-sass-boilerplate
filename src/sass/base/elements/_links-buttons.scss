@@ -29,9 +29,11 @@ a {
    -ms-touch-action: manipulation;
    touch-action: manipulation;
    white-space: nowrap;
-   line-height: 1;
 
-   font-size: var(--text-standard);
+   @extend .text-s;
+   font-weight: var(--semiBold);
+   letter-spacing: 1.25px;
+
    color: var(--c-link);
 }
 

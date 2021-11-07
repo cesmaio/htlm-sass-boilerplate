@@ -4,52 +4,8 @@
 
 :root {
    /* --------------------------------
-      ## Typography and Spacing
+      ## Spacing
    -------------------------------- */
-   /* type offset */
-   --text-scale-size: 1px;
-
-   // large screens
-   /* type scale */
-   --text-h1-size: calc(48 * var(--text-scale-size));
-   --text-h2-size: calc(40 * var(--text-scale-size));
-   --text-h3-size: calc(32 * var(--text-scale-size));
-   --text-title-size: calc(24 * var(--text-scale-size));
-   --text-subtitle-size: calc(20 * var(--text-scale-size));
-   --text-body-size: calc(16 * var(--text-scale-size));
-   --text-standard-size: calc(14 * var(--text-scale-size));
-   --text-caption-size: calc(12 * var(--text-scale-size));
-
-   /* line-height */
-   --heading-line-height: 1.25;
-   --body-line-height: 1.5;
-
-   // small screens
-   @include media("<mobile") {
-      /* type scale */
-      --text-h1-size: calc(40 * var(--text-scale-size));
-      --text-h2-size: calc(32 * var(--text-scale-size));
-      --text-h3-size: calc(26 * var(--text-scale-size));
-      --text-title-size: calc(22 * var(--text-scale-size));
-      --text-subtitle-size: calc(18 * var(--text-scale-size));
-      --text-body-size: calc(16 * var(--text-scale-size));
-      --text-standard-size: calc(14 * var(--text-scale-size));
-      --text-caption-size: calc(12 * var(--text-scale-size));
-
-      /* line-height */
-      --heading-line-height: 1.5;
-      --body-line-height: 1.25;
-   }
-
-   // text size reference
-   --text-xxl: var(--text-h3-size);
-   --text-xl: var(--text-h4-size);
-   --text-l: var(--text-title-size);
-   --text-m: var(--text-body-size);
-   --text-s: var(--text-subtitle-size);
-   --text-xs: var(--text-caption-size);
-
-   /* spacing */
    --space-unit: var(--text-m);
 
    --space-xxs: calc(0.25 * var(--space-unit));
@@ -63,19 +19,8 @@
    --space-M: calc(6 * var(--space-unit));
    --space-L: calc(8 * var(--space-unit));
 
-   /* ### font weight */
-   --thin: 100;
-   --extraLight: 200;
-   --light: 300;
-   --normal: 400;
-   --medium: 500;
-   --semiBold: 600;
-   --bold: 700;
-   --extraBold: 800;
-   --heavy: 900;
-
    /* --------------------------------
-   ## Colors
+      ## Colors
    -------------------------------- */
 
    // primary
@@ -105,16 +50,16 @@
    // grayscale 1
 
    // --black: #1d1d21;
-   // --gray9: #212125;
-   // --gray8: #2a2a2f;
-   // --gray7: #3c3c44;
-   // --gray6: #53535f;
-   // --gray5: #6b6b7a;
-   // --gray4: #858594;
-   // --gray3: #a0a0ac;
-   // --gray2: #bbbbc3;
-   // --gray1: #d6d6db;
-   // --gray0: #f1f1f3;
+   // --gray-900: #212125;
+   // --gray-800: #2a2a2f;
+   // --gray-700: #3c3c44;
+   // --gray-600: #53535f;
+   // --gray-500: #6b6b7a;
+   // --gray-400: #858594;
+   // --gray-300: #a0a0ac;
+   // --gray-200: #bbbbc3;
+   // --gray-100: #d6d6db;
+   // --gray-50: #f1f1f3;
    // --white: #f7f7fc;
 
    // grayscale 2
@@ -122,19 +67,26 @@
    ///@link https://design.gitlab.com/product-foundations/colors
 
    --black: #000;
-   --gray95: #1f1f1f;
-   --gray9: #303030;
-   --gray8: #404040;
-   --gray7: #525252;
-   --gray6: #5e5e5e;
-   --gray5: #666666;
-   --gray4: #868686;
-   --gray3: #999999;
-   --gray2: #bfbfbf;
-   --gray1: #dbdbdb;
-   --gray05: #f0f0f0;
-   --gray0: #fafafa;
+   --gray-950: #1f1f1f;
+   --gray-900: #303030;
+   --gray-800: #404040;
+   --gray-700: #525252;
+   --gray-600: #5e5e5e;
+   --gray-500: #666666;
+   --gray-400: #868686;
+   --gray-300: #999999;
+   --gray-200: #bfbfbf;
+   --gray-100: #dbdbdb;
+   --gray-50: #f0f0f0;
+   --gray-10: #fafafa;
    --white: #fff;
+
+   /* transparencies */
+   --t-a24: rgba(var(--black), 0.24);
+   --t-a8: rgba(var(--black), 0.8);
+   --t-a6: rgba(var(--black), 0.6);
+   --t-a4: rgba(var(--black), 0.4);
+   --t-a2: rgba(var(--black), 0.2);
 
    // feedback
    --c-success: #88c459;
@@ -142,8 +94,12 @@
    --c-warning: #ffd137;
    --c-info: #30acdd;
 
+   --c-link: #21a7a7;
+   --c-link-hover: #007171;
+   --c-link-visited: #801990;
+
    /* --------------------------------
-   ## Icons
+      ## Icons
    -------------------------------- */
 
    --icon-xs: 16px;
@@ -153,7 +109,7 @@
    --icon-xl: 64px;
 
    /* --------------------------------
-   ## Border radius
+      ## Border radius
    -------------------------------- */
 
    --br-xs: 2px;
@@ -164,7 +120,7 @@
    --br-xxl: 32px;
 
    /* --------------------------------
-   ## Width
+      ## Width
    -------------------------------- */
    --max-width: 1180px;
    --scrollbar-width: 10px;

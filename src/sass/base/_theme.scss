@@ -3,35 +3,31 @@
 // -----------------------------------------------------------------------------
 body {
    /* typography */
-   --c-text-primary: var(--gray8); // copy text
-   --c-text-secondary: var(--gray6); // copy text secondary
-   --c-text-placeholder: var(--gray4); // copy text for inputs
-   --c-title: var(--black); // headings and titles
-   --c-subtitle: var(--gray9); // subheadings and subtitles
+   --c-title: var(--gray-900); // headings and titles
+   --c-subtitle: var(--gray-800); // subheadings and subtitles
+   --c-text-primary: var(--gray-700); // copy text
+   --c-text-secondary: var(--gray-500); // copy text secondary
+   --c-text-placeholder: var(--gray-400); // copy text for inputs
 
-   --c-text-primary-invert: var(--gray1);
-   --c-text-secondary-invert: var(--gray3);
-   --c-text-placeholder-invert: var(--gray5);
-   --c-title-invert: var(--white);
-   --c-subtitle-invert: var(--gray0);
+   --c-title-invert: var(--gray-100);
+   --c-subtitle-invert: var(--gray-200);
+   --c-text-primary-invert: var(--gray-300);
+   --c-text-secondary-invert: var(--gray-500);
+   --c-text-placeholder-invert: var(--gray-600);
 
    --c-caption: var(--c--text-secondary); // caption and label text
-   --c-link: var(--c-primary);
-   --c-link-visited: var(--c-primary-dark);
-   --c-mark: var(--c-secondary-bg);
-   --c-blockquote-border: var(--gray2);
+
+   --c-link: var(--c-secondary);
+   --c-link-hover: var(--c-primary-bg);
+   --c-link-visited: var(--c-secondary-dark);
 
    /* border */
-   --c-border: var(--gray3);
-   --c-border-focus: var(--c-primary);
+   --c-line: var(--gray-300);
 
    /* background */
-   --c-bg: var(--gray0); // main background
-   --c-bg1: var(--gray0);
-   --c-bg2: var(--gray1);
-   --c-bg3: var(--gray2);
-   --c-bg4: var(--gray3);
-   --c-bg5: var(--gray4);
+   --c-bg0: var(--gray-50); // main background
+   --c-bg: var(--gray-100);
+   --c-input-bg: var(--gray-200);
 
    /* buttons */
    --c-btn-primary-bg: var(--c-primary);
@@ -40,18 +36,18 @@ body {
    --c-btn-primary-label: var(--white);
 
    /* icons */
-   --c-icon-primary: var(--gray8);
-   --c-icon-primary-invert: var(--gray2);
+   --c-icon-primary: var(--gray-800);
+   --c-icon-primary-invert: var(--gray-200);
    --c-icon-secondary: inherit;
 
    /* forms */
    --c-input-bg: var(--gray1); // input field background
 
    /* base */
-   --selection-c: var(--c-bg);
+   --selection-c: var(--c-secondary-bg);
    --selection-c-bg: var(--c-primary-light);
    --scrollbar-c: var(--c-primary);
-   --scrollbar-c-bg: var(--c-bg1);
+   --scrollbar-c-bg: var(--gray-100);
 
    .light {
    }

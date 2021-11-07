@@ -20,7 +20,7 @@ textarea {
    min-height: 50px;
 }
 
-@if settings("form-controls") {
+@if settings('form-controls') {
    // Basic form controls
    %form_control {
       position: relative;
@@ -116,24 +116,24 @@ textarea {
    // </label>
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
 textarea {
    color: var(--c-text-primary);
-   border: 1px solid var(--c-border);
+   border: 1px solid var(--c-line);
    background-color: var(--c-input-bg);
    border-radius: 3px;
    padding: var(--space-xxs);
@@ -145,5 +145,5 @@ textarea {
 }
 
 select {
-   border: 1px solid var(--c-border);
+   border: 1px solid var(--c-line);
 }

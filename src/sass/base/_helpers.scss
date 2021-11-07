@@ -12,7 +12,7 @@
 .clearfix {
    *zoom: 1;
    &::after {
-      content: "";
+      content: '';
       display: table;
       line-height: 0;
       clear: both;
@@ -72,7 +72,7 @@
 /// @param {String} $path - asset path
 /// @return {Url}
 @function asset($base, $type, $path) {
-   @return url($base + $type + $path);
+   @return url($base+$type+$path);
 }
 
 /// Returns URL to an image based on its path
@@ -81,7 +81,7 @@
 /// @return {Url}
 /// @require $base-url
 @function image($path, $base: $base-url) {
-   @return asset($base, "images/", $path);
+   @return asset($base, 'images/', $path);
 }
 
 /// Returns URL to a font based on its path
@@ -90,10 +90,8 @@
 /// @return {Url}
 /// @require $base-url
 @function font($path, $base: $base-url) {
-   @return asset($base, "fonts/", $path);
+   @return asset($base, 'fonts/', $path);
 }
-
-@use "sass:color";
 
 /// Slightly lighten a color
 /// @access public
@@ -200,7 +198,7 @@
 /// @param {String} $overflow [ellipsis]
 @mixin vertical-align {
    &:before {
-      content: "";
+      content: '';
       display: inline-block;
       vertical-align: middle;
       height: 100%;

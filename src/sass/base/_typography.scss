@@ -1,81 +1,241 @@
 // maybe import from google fonts here, or set @font-face declarations
 
-$font-primary: "Open Sans", "Helvetica Neue Light", "Helvetica Neue",
-   "Helvetica", "Arial", sans-serif !default;
-$font-secondary: "serif" !default;
-$font-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
-   "Monaco", monospace !default;
+$font-primary: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
+   'Helvetica', 'Arial', sans-serif !default;
+$font-secondary: 'serif' !default;
+$font-code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+   'Monaco', monospace !default;
+
+:root {
+   /* typography variables */
+   --text-scale: 1px; // type offset
+
+   --h1-size: calc(var(--text-scale) * 60);
+   --h1-line-height: calc(var(--text-scale) * 70);
+   --h1-letter-spacing: -1px;
+
+   --h2-size: calc(var(--text-scale) * 48);
+   --h2-line-height: calc(var(--text-scale) * 60);
+   --h2-letter-spacing: -0.5px;
+
+   --h3-size: calc(var(--text-scale) * 40);
+   --h3-line-height: calc(var(--text-scale) * 48);
+   --h3-letter-spacing: 0px;
+
+   --h4-size: calc(var(--text-scale) * 32);
+   --h4-line-height: calc(var(--text-scale) * 40);
+   --h4-letter-spacing: 0px;
+
+   --h5-size: calc(var(--text-scale) * 28);
+   --h5-line-height: calc(var(--text-scale) * 40);
+   --h5-letter-spacing: 0.1px;
+
+   --title-size: calc(var(--text-scale) * 24);
+   --title-line-height: calc(var(--text-scale) * 28);
+   --title-letter-spacing: 0.15px;
+
+   --subtitle-size: calc(var(--text-scale) * 20);
+   --subtitle-line-height: calc(var(--text-scale) * 24);
+   --subtitle-letter-spacing: 0.15px;
+
+   --body-size: calc(var(--text-scale) * 18);
+   --body-line-height: calc(var(--text-scale) * 24);
+   --body-letter-spacing: 0.25px;
+
+   --standard-size: calc(var(--text-scale) * 16);
+   --standard-line-height: calc(var(--text-scale) * 24);
+   --standard-letter-spacing: 0.5px;
+
+   --caption-size: calc(var(--text-scale) * 14);
+   --caption-line-height: calc(var(--text-scale) * 20);
+   --caption-letter-spacing: 0.4px;
+
+   --overline-size: calc(var(--text-scale) * 12);
+   --overline-line-height: calc(var(--text-scale) * 18);
+   --overline-letter-spacing: 1.5px;
+
+   @include media('>desktop-l') {
+      --text-scale: 1.2px;
+   }
+   @include media('<desktop') {
+      --text-scale: 0.9px;
+   }
+   @include media('<=tablet') {
+      --text-scale: 0.86px;
+   }
+   @include media('<=mobile-l') {
+      --text-scale: 0.83px;
+   }
+
+   /* font weights */
+
+   --thin: 100;
+   --extraLight: 200;
+   --light: 300;
+   --regular: 400;
+   --medium: 500;
+   --semiBold: 600;
+   --bold: 700;
+   --extraBold: 800;
+   --heavy: 900;
+}
+
+/* text levels */
+
+.text-6xl {
+   font-size: var(--h1-size);
+   line-height: var(--h1-line-height);
+   letter-spacing: var(--h1-letter-spacing);
+   font-weight: var(--regular);
+}
+.text-5xl {
+   font-size: var(--h2-size);
+   line-height: var(--h2-line-height);
+   letter-spacing: var(--h2-letter-spacing);
+   font-weight: var(--regular);
+}
+.text-4xl {
+   font-size: var(--h3-size);
+   line-height: var(--h3-line-height);
+   letter-spacing: var(--h3-letter-spacing);
+   font-weight: var(--regular);
+}
+.text-3xl {
+   font-size: var(--h4-size);
+   line-height: var(--h4-line-height);
+   letter-spacing: var(--h4-letter-spacing);
+   font-weight: var(--medium);
+}
+.text-xxl {
+   font-size: var(--h5-size);
+   line-height: var(--h5-line-height);
+   letter-spacing: var(--h5-letter-spacing);
+   font-weight: var(--medium);
+}
+.text-xl {
+   font-size: var(--title-size);
+   line-height: var(--title-line-height);
+   letter-spacing: var(--title-letter-spacing);
+   font-weight: var(--medium);
+}
+.text-l {
+   font-size: var(--subtitle-size);
+   line-height: var(--subtitle-line-height);
+   letter-spacing: var(--subtitle-letter-spacing);
+   font-weight: var(--semiBold);
+}
+.text-m {
+   font-size: var(--body-size);
+   line-height: var(--body-line-height);
+   letter-spacing: var(--body-letter-spacing);
+   font-weight: var(--medium);
+}
+.text-s {
+   font-size: var(--standard-size);
+   line-height: var(--standard-line-height);
+   letter-spacing: var(--standard-letter-spacing);
+   font-weight: var(--regular);
+}
+.text-xs {
+   font-size: var(--caption-size);
+   line-height: var(--caption-line-height);
+   letter-spacing: var(--caption-letter-spacing);
+   font-weight: var(--light);
+}
+.text-xxs {
+   font-size: var(--overline-size);
+   line-height: var(--overline-line-height);
+   letter-spacing: var(--overline-letter-spacing);
+   font-weight: var(--regular);
+}
+
+/* base */
 
 body {
+   @extend .text-s; // standard
    font-family: $font-primary;
-   font-weight: var(--medium);
-   font-size: var(--text-body-size);
-   line-height: var(--body-line-height);
    color: var(--c-text-primary);
-   @if settings("use-font-smooth") {
+   @if settings('use-font-smooth') {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
    }
 }
-
 h1,
 h2,
 h3,
 h4,
+h5,
+h6,
+.title,
+.subtitle,
 form legend {
    margin-bottom: var(--space-xxs);
-   line-height: var(--heading-line-height);
    color: var(--c-title);
 }
-.title {
-   color: var(--c-text-title);
-   line-height: var(--heading-line-height);
-}
-.subtitle {
-   color: var(--c-text-subtitle);
+p,
+.copy {
+   font-family: $font-secondary;
 }
 
-/* text size and weight */
 h1 {
-   font-size: var(--text-h1-size);
-   font-weight: var(--extraBold);
+   @extend .text-6xl;
+   color: var(--c-title);
 }
 h2 {
-   font-size: var(--text-h2-size);
-   font-weight: var(--bold);
+   @extend .text-5xl;
+   color: var(--c-title);
 }
 h3 {
-   font-size: var(--text-h3-size);
-   font-weight: var(--semiBold);
+   @extend .text-4xl;
+   color: var(--c-subtitle);
 }
 h4 {
-   font-size: var(--text-h4-size);
-   font-weight: var(--semiBold);
+   @extend .text-3xl;
+   color: var(--c-subtitle);
 }
-
+h5 {
+   @extend .text-xxl;
+   color: var(--c-subtitle);
+}
+h6,
+.title {
+   @extend .text-xl;
+   color: var(--c-title);
+}
+.subtitle {
+   @extend .text-l;
+   color: var(--c-subtitle);
+}
+p,
+.copy {
+   @extend .text-m;
+   .primary {
+      color: var(--c-text-primary);
+   }
+   .secondary {
+      color: var(--c-text-secondary);
+   }
+}
 small,
-caption,
-.text-s {
-   font-size: var(--text-caption-size);
-   font-weight: var(--light);
+caption {
+   @extend .text-xs;
+   color: var(--c-caption);
 }
-
-.text-xs {
-   font-size: var(--text-xs);
-}
-
-p {
-   line-height: var(--body-line-height);
+.overline {
+   @extend .text-xxs;
+   color: var(--c-text-secondary);
 }
 
 span {
    font-family: inherit;
 }
-
 b,
 strong {
    font-weight: var(--bold);
    font-family: inherit;
+}
+code {
+   font-family: $font-code;
 }
 
 /* paragraph spacings */
