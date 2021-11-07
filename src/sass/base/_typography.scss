@@ -1,8 +1,21 @@
+// maybe import from google fonts here, or set @font-face declarations
+
+$font-primary: "Open Sans", "Helvetica Neue Light", "Helvetica Neue",
+   "Helvetica", "Arial", sans-serif !default;
+$font-secondary: "serif" !default;
+$font-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+   "Monaco", monospace !default;
+
 body {
    font-family: $font-primary;
    font-weight: var(--medium);
    font-size: var(--text-body-size);
+   line-height: var(--body-line-height);
    color: var(--c-text-primary);
+   @if settings("use-font-smooth") {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+   }
 }
 
 h1,
@@ -41,7 +54,8 @@ h4 {
 }
 
 small,
-caption {
+caption,
+.text-s {
    font-size: var(--text-caption-size);
    font-weight: var(--light);
 }

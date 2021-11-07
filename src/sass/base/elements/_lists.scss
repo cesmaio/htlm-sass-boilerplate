@@ -19,3 +19,10 @@ dt {
 dd {
    margin: 0 var(--space-l) var(--space-l);
 }
+
+hr {
+   background-color: var(--c-border);
+   border: 0;
+   height: 1px;
+   margin-bottom: var(--space-l);
+}

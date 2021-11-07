@@ -1,3 +1,4 @@
+/* icons */
 .icon {
    display: inline-block;
    width: var(--icon-xs);
@@ -5,4 +6,12 @@
    stroke-width: 0;
    stroke: currentColor;
    fill: currentColor;
+}
+.icon-s {
+   @extend .icon;
+   width: var(--icon-s);
+}
+.icon-m {
+   @extend .icon;
+   width: var(--icon-m);
 }

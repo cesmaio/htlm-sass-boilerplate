@@ -1,9 +1,7 @@
 // -----------------------------------------------------------------------------
-// When having several themes, this file contains everything related to the
-// default one.
-// Specific theme stuff is in separate file (eg. "_light.scss", "_dark.scss")
+// This file defines colors for every theme
 // -----------------------------------------------------------------------------
-:root {
+body {
    /* typography */
    --c-text-primary: var(--gray8); // copy text
    --c-text-secondary: var(--gray6); // copy text secondary
@@ -48,8 +46,15 @@
 
    /* forms */
    --c-input-bg: var(--gray1); // input field background
-}
 
-::selection {
-   background-color: var(--c-btn-primary-light);
+   /* base */
+   --selection-c: var(--c-bg);
+   --selection-c-bg: var(--c-primary-light);
+   --scrollbar-c: var(--c-primary);
+   --scrollbar-c-bg: var(--c-bg1);
+
+   .light {
+   }
+   .dark {
+   }
 }

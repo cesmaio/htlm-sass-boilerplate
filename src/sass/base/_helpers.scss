@@ -1,6 +1,10 @@
 // -----------------------------------------------------------------------------
-// This file contains CSS helper classes.
+// This file contains CSS helper classes, Sass functions and mixins.
 // -----------------------------------------------------------------------------
+
+/* ----------
+   Classes
+------------- */
 
 /**
  * Clear inner floats
@@ -58,6 +62,158 @@
    width: 1px;
 }
 
-.clickable {
-   cursor: pointer;
+/* ------------
+   Functions
+--------------- */
+
+/// Native `url(..)` function wrapper
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+   @return url($base + $type + $path);
+}
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function image($path, $base: $base-url) {
+   @return asset($base, "images/", $path);
+}
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function font($path, $base: $base-url) {
+   @return asset($base, "fonts/", $path);
+}
+
+@use "sass:color";
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+   @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+   @return mix(black, $color, $percentage);
+}
+
+/* ---------
+   Mixins
+------------ */
+
+/// Sizing
+/// @param {Number} $width
+/// @param {Number} $height [$width]
+@mixin size($width, $height: $width) {
+   width: $width;
+   height: $height;
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+   @if $self {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+         @content;
+      }
+   } @else {
+      &:hover,
+      &:active,
+      &:focus {
+         @content;
+      }
+   }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+   #{$context} & {
+      @content;
+   }
+}
+
+/// Ensure text doesn't overflow its container and breaks nicely
+/// @author HackingUI
+/// @link https://hackingui.com/10-best-scss-utilities/
+/// @param {String} $overflow [ellipsis]
+@mixin truncate-text($overflow: ellipsis) {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+/**
+ * Alignments
+ */
+
+@mixin center-block {
+   display: block;
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+@mixin align-left {
+   float: left;
+   margin-right: 1.5em;
+   margin-bottom: 1.5em;
+}
+
+@mixin align-right {
+   float: right;
+   margin-left: 1.5em;
+   margin-bottom: 1.5em;
+}
+
+@mixin align-center {
+   clear: both;
+   @include center-block();
+   margin-bottom: 1.5em;
+}
+
+/// Vertically center elements with a dynamic size
+/// @author HackingUI
+/// @link https://hackingui.com/10-best-scss-utilities/
+/// @param {String} $overflow [ellipsis]
+@mixin vertical-align {
+   &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+      width: 0.1px;
+   }
+}
+
+/// display li elements inline
+@mixin list-inline() {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   li {
+      display: inline-block;
+   }
 }

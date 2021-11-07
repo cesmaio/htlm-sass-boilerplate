@@ -1,0 +1,42 @@
+/* PRINT STYLES */
+/// @author Riccardo-Zanutta
+/// @link https://github.dev/Riccardo-Zanutta/brick
+
+section {
+   width: 100%;
+   display: block;
+   position: relative;
+   @extend .clearfix;
+}
+
+// Layout Utility classes
+.content {
+   width: var(--max-width);
+   margin: 0 auto;
+   @extend .clearfix;
+}
+
+.inner-container {
+   width: 100%;
+   @extend .clearfix;
+}
+
+// helpers
+.text-center {
+   text-align: center;
+}
+.text-left {
+   text-align: left;
+}
+.text-right {
+   text-align: right;
+}
+.text-uppercase {
+   text-transform: uppercase;
+}
+.full-width {
+   width: 100%;
+}
+.spacing {
+   padding: var(--space-m) 0;
+}

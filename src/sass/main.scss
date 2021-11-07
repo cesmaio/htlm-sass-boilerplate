@@ -4,25 +4,22 @@
 @import "vendors/normalize", "vendors/include-media";
 
 // 2. Configuration and helpers
-@import "utilities/variables", "utilities/functions", "utilities/mixins",
-   "utilities/animation";
+@import "base/config", "base/helpers";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/icons",
-   "base/helpers";
+@import "base/base", "base/variables", "base/theme", "base/typography",
+   "base/animation";
 // Base elements
-@import "base/elements/buttons", "base/elements/fields", "base/elements/hr",
-   "base/elements/links", "base/elements/lists", "base/elements/media",
+@import "base/elements/links-buttons", "base/elements/form",
+   "base/elements/icons", "base/elements/lists", "base/elements/media",
    "base/elements/tables";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer";
+@import "layout/header", "layout/body", "layout/footer", "layout/print",
+   "layout/view";
 
 // 5. Components
 @import "components/tooltip";
 
 // 6. Page-specific styles
 @import "pages/home";
-
-// 7. Themes
-@import "themes/default";

@@ -1,0 +1,83 @@
+// basic link
+a {
+   color: var(--c-link);
+   text-decoration: none;
+
+   @include on-event {
+      // color: var(--c-text-primary);
+      text-decoration: underline;
+   }
+
+   &:hover,
+   &:active {
+      outline: 0;
+   }
+
+   &:visited {
+      color: var(--c-link-visited);
+   }
+}
+
+%base-btn {
+   cursor: pointer;
+   text-decoration: none;
+   background-color: transparent;
+   display: inline-flex;
+   position: relative;
+   padding: 0;
+   border: 0;
+   -ms-touch-action: manipulation;
+   touch-action: manipulation;
+   white-space: nowrap;
+   line-height: 1;
+
+   font-size: var(--text-standard);
+   color: var(--c-link);
+}
+
+.btn {
+   @extend %base-btn;
+
+   &:focus,
+   &:active {
+      outline: none;
+      box-shadow: none;
+      border: none;
+   }
+   &.button-disabled,
+   &[disabled] {
+      cursor: not-allowed;
+      opacity: 0.65;
+   }
+}
+
+.link-btn {
+   @extend %base-btn;
+   align-items: center;
+   background: var(--c-link);
+   padding: var(--space-xxs) var(--space-xs);
+   font-size: var(--text-m);
+
+   @include on-event {
+      text-decoration: none;
+   }
+
+   // secondary
+   &-secondary {
+      background-color: var(--c-secondary);
+   }
+}
+
+// example of button component
+.btn-primary {
+   @extend .btn;
+   background-color: var(--c-primary);
+   color: var(--white);
+   border-radius: var(--br-m);
+   padding: var(--space-s) var(--space-m);
+
+   transition: background-color 0.3s ease;
+   @include on-event {
+      background-color: var(--c-primary-dark);
+   }
+}
