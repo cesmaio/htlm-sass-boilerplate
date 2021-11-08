@@ -1,22 +1,34 @@
 @charset "UTF-8";
 
 // 1. Vendors
-@import 'vendors/normalize', 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/include-media';
 
 // 2. Configuration and helpers
-@import 'base/config', 'base/helpers';
+@import 'base/config';
+@import 'base/helpers';
 
 // 3. Base stuff
-@import 'base/base', 'base/variables', 'base/theme', 'base/typography',
-   'base/animations', 'base/shadows';
+@import 'base/base';
+@import 'base/variables';
+@import 'base/theme';
+@import 'base/typography';
+@import 'base/animations';
+@import 'base/shadows';
 // Base elements
-@import 'base/elements/links-buttons', 'base/elements/form',
-   'base/elements/icons', 'base/elements/lists', 'base/elements/media',
-   'base/elements/tables';
+@import 'base/elements/links-buttons';
+@import 'base/elements/form';
+@import 'base/elements/icons';
+@import 'base/elements/lists';
+@import 'base/elements/media';
+@import 'base/elements/tables';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/body', 'layout/footer', 'layout/print',
-   'layout/view';
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';
+@import 'layout/print';
+@import 'layout/view';
 
 // 5. Components
 @import 'components/tooltip';
