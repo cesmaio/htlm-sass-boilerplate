@@ -83,66 +83,77 @@ $font-code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
 /* text levels */
 
 .text-6xl {
+   // h1
    font-size: var(--h1-size);
    line-height: var(--h1-line-height);
    letter-spacing: var(--h1-letter-spacing);
    font-weight: var(--regular);
 }
 .text-5xl {
+   // h2
    font-size: var(--h2-size);
    line-height: var(--h2-line-height);
    letter-spacing: var(--h2-letter-spacing);
    font-weight: var(--regular);
 }
 .text-4xl {
+   // h3
    font-size: var(--h3-size);
    line-height: var(--h3-line-height);
    letter-spacing: var(--h3-letter-spacing);
    font-weight: var(--regular);
 }
 .text-3xl {
+   // h4
    font-size: var(--h4-size);
    line-height: var(--h4-line-height);
    letter-spacing: var(--h4-letter-spacing);
    font-weight: var(--medium);
 }
 .text-xxl {
+   // h5
    font-size: var(--h5-size);
    line-height: var(--h5-line-height);
    letter-spacing: var(--h5-letter-spacing);
    font-weight: var(--medium);
 }
 .text-xl {
+   // h6 (title)
    font-size: var(--title-size);
    line-height: var(--title-line-height);
    letter-spacing: var(--title-letter-spacing);
    font-weight: var(--medium);
 }
 .text-l {
+   // subtitle
    font-size: var(--subtitle-size);
    line-height: var(--subtitle-line-height);
    letter-spacing: var(--subtitle-letter-spacing);
    font-weight: var(--semiBold);
 }
 .text-m {
+   // body
    font-size: var(--body-size);
    line-height: var(--body-line-height);
    letter-spacing: var(--body-letter-spacing);
    font-weight: var(--medium);
 }
 .text-s {
+   // standard
    font-size: var(--standard-size);
    line-height: var(--standard-line-height);
    letter-spacing: var(--standard-letter-spacing);
    font-weight: var(--regular);
 }
 .text-xs {
+   // caption (small)
    font-size: var(--caption-size);
    line-height: var(--caption-line-height);
    letter-spacing: var(--caption-letter-spacing);
    font-weight: var(--light);
 }
 .text-xxs {
+   // overline (extrasmall)
    font-size: var(--overline-size);
    line-height: var(--overline-line-height);
    letter-spacing: var(--overline-letter-spacing);
@@ -224,6 +235,7 @@ caption {
 .overline {
    @extend .text-xxs;
    color: var(--c-text-secondary);
+   text-transform: uppercase;
 }
 
 span {
