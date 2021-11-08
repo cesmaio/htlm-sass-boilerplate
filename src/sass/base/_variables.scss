@@ -6,18 +6,19 @@
    /* --------------------------------
       ## Spacing
    -------------------------------- */
-   --space-unit: var(--text-m);
+   --space-unit: var(--standard-size);
 
    --space-xxs: calc(0.25 * var(--space-unit));
    --space-xs: calc(0.5 * var(--space-unit));
    --space-s: calc(0.8 * var(--space-unit));
-   --space-m: calc(1.3 * var(--space-unit));
-   --space-l: calc(2 * var(--space-unit));
-   --space-xl: calc(3 * var(--space-unit));
-   --space-xxl: calc(4 * var(--space-unit));
-   --space-S: calc(5 * var(--space-unit));
-   --space-M: calc(6 * var(--space-unit));
-   --space-L: calc(8 * var(--space-unit));
+   --space-m: calc(1.2 * var(--space-unit));
+   --space-l: calc(1.9 * var(--space-unit));
+   --space-xl: calc(2.8 * var(--space-unit));
+   --space-xxl: calc(3.6 * var(--space-unit));
+   --space-S: calc(4.5 * var(--space-unit));
+   --space-M: calc(5.3 * var(--space-unit));
+   --space-L: calc(6.5 * var(--space-unit));
+   --space-XL: calc(8 * var(--space-unit));
 
    /* --------------------------------
       ## Colors
