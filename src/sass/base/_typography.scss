@@ -160,6 +160,31 @@ $font-code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
    font-weight: var(--regular);
 }
 
+// display text
+%text-display-base {
+   font-size: calc(var(--h1-size) * var(--text-offset));
+   line-height: calc(var(--h1-line-height) * var(--text-offset));
+   letter-spacing: calc(var(--h1-letter-spacing) * var(--text-offset) * -1);
+   font-weight: var(--heavy);
+}
+
+.text-S {
+   --text-offset: 1.5;
+   @extend %text-display-base;
+}
+.text-M {
+   --text-offset: 2;
+   @extend %text-display-base;
+}
+.text-L {
+   --text-offset: 2.5;
+   @extend %text-display-base;
+}
+.text-XL {
+   --text-offset: 3;
+   @extend %text-display-base;
+}
+
 /* base */
 
 body {
