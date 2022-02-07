@@ -18,17 +18,26 @@ body {
    --c-caption: var(--c--text-secondary); // caption and label text
 
    --c-link: var(--c-secondary);
-   --c-link-hover: var(--c-primary-bg);
+   --c-link-hover: var(--c-secondary-dark);
    --c-link-visited: var(--c-secondary-dark);
 
    /* border */
    --c-line: var(--gray-300);
 
    /* background */
-   --c-bg0: var(--gray-50); // main background
-   --c-bg: var(--gray-100);
-   --c-input-bg: var(--gray-200);
+   --c-bg: var(--gray-50); // main background
+   --c-bg-1: var(--gray-100);
+   --c-bg-2: var(--gray-200);
+   --c-bg-3: var(--gray-300);
+   --c-bg-4: var(--gray-400);
+   --c-input-bg: var(--gray-300); //input field background
 
+   --c-bg-invert: var(--gray-950);
+   --c-bg-1-invert: var(--gray-900);
+   --c-bg-2-invert: var(--gray-800);
+   --c-bg-3-invert: var(--gray-700);
+   --c-bg-4-invert: var(--gray-600);
+   --c-input-bg-invert: var(--gray-700); //input field background
    /* buttons */
    --c-btn-primary-bg: var(--c-primary);
    --c-btn-primary-hover: var(--c-primary-light);
@@ -37,17 +46,16 @@ body {
 
    /* icons */
    --c-icon-primary: var(--gray-800);
-   --c-icon-primary-invert: var(--gray-200);
+   --c-icon-primary-invert: var(--gray-300);
    --c-icon-secondary: inherit;
 
-   /* forms */
-   --c-input-bg: var(--gray1); // input field background
-
    /* base */
-   --selection-c: var(--c-secondary-bg);
-   --selection-c-bg: var(--c-primary-light);
-   --scrollbar-c: var(--c-primary);
-   --scrollbar-c-bg: var(--gray-100);
+   --selection-c: var(--black);
+   --selection-c-bg: var(--c-secondary-lighter);
+   --scrollbar-c: var(--gray-700);
+   --scrollbar-c-bg: var(--c-bg);
+   --scrollbar-c-invert: var(--gray-500);
+   --scrollbar-c-bg-invert: var(--c-bg-1-invert);
 
    .light {
    }

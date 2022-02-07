@@ -34,8 +34,8 @@ img::selection {
    background: transparent;
 }
 
-/* scrollbar
-   credits: https://ishadeed.com/article/custom-scrollbars-css/ */
+/* scrollbar */
+/// credits: @link https://ishadeed.com/article/custom-scrollbars-css/
 ::-webkit-scrollbar {
    width: var(--scrollbar-width);
 }
@@ -54,4 +54,18 @@ img::selection {
 html {
    scrollbar-width: var(--scrollbar-width);
    scrollbar-color: var(--scrollbar-c) var(--scrollbar-c-bg);
+}
+
+/* scrollbar on inverted background */
+.invert {
+   ::-webkit-scrollbar-thumb {
+      background-color: var(--scrollbar-c-invert);
+   }
+   ::-webkit-scrollbar-track {
+      background-color: var(--scrollbar-c-bg-invert);
+   }
+
+   html {
+      scrollbar-color: var(--scrollbar-c-invert) var(--scrollbar-c-bg-invert);
+   }
 }

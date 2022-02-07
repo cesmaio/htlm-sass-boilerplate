@@ -1,0 +1,81 @@
+// How to create a color palette
+//
+// 1. Choose primary and secondary colors
+// 2. Choose accent color form HUE triad (https://paletton.com/)
+// 3. Generate light and dark variants of every color (https://material.io/resources/color)
+// 4. Generate grayscale + opinionated tints and shades for every color (https://grayscale.design/app)
+//    or generate custom tints and shades (20/40/60/80 %) (https://maketintsandshades.com)
+//
+
+:root {
+   // primary
+   --c-primary: #5f2eea;
+   --c-primary-light: #995eff;
+   --c-primary-dark: #0500b6;
+   // --c-primary-100 ...
+
+   // secondary
+   --c-secondary: #1cc8ee;
+   --c-secondary-light: #6efbff;
+   --c-secondary-dark: #0097bb;
+   // --c-secondary-100 ...
+
+   // accent
+   --c-accent: #caf11c;
+   --c-accent-light: #ffff5e;
+   --c-accent-dark: #95be00;
+   // --c-accent-100 ...
+
+   // grayscale 1
+
+   // --black: #1d1d21;
+   // --gray-900: #212125;
+   // --gray-800: #2a2a2f;
+   // --gray-700: #3c3c44;
+   // --gray-600: #53535f;
+   // --gray-500: #6b6b7a;
+   // --gray-400: #858594;
+   // --gray-300: #a0a0ac;
+   // --gray-200: #bbbbc3;
+   // --gray-100: #d6d6db;
+   // --gray-50: #f1f1f3;
+   // --white: #f7f7fc;
+
+   // grayscale 2
+   ///@author GitLab
+   ///@link https://design.gitlab.com/product-foundations/colors
+
+   --black: #000;
+   --gray-950: #1f1f1f;
+   --gray-900: #303030;
+   --gray-800: #404040;
+   --gray-700: #525252;
+   --gray-600: #5e5e5e;
+   --gray-500: #666666;
+   --gray-400: #868686;
+   --gray-300: #999999;
+   --gray-200: #bfbfbf;
+   --gray-100: #dbdbdb;
+   --gray-50: #f0f0f0;
+   --gray-10: #fafafa;
+   --white: #fff;
+
+   /* transparencies */
+   --t-a85: rgba(0, 0, 0, 85%);
+   --t-a8: rgba(0, 0, 0, 80%);
+   --t-a6: rgba(0, 0, 0, 60%);
+   --t-a4: rgba(0, 0, 0, 40%);
+   --t-a2: rgba(0, 0, 0, 20%);
+   --t-a1: rgba(0, 0, 0, 10%);
+   --t-a0: rgba(0, 0, 0, 0%);
+
+   // feedback
+   --c-success: #88c459;
+   --c-error: #f5414f;
+   --c-warning: #ffd137;
+   --c-info: #30acdd;
+
+   --c-link: #21a7a7;
+   --c-link-hover: #007171;
+   --c-link-visited: #801990;
+}

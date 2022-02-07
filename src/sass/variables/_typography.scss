@@ -1,0 +1,73 @@
+:root {
+   /* font variables */
+   --text-scale: 1px; // type offset
+
+   --h1-size: calc(var(--text-scale) * 60);
+   --h1-line-height: calc(var(--text-scale) * 70);
+   --h1-letter-spacing: -1px;
+
+   --h2-size: calc(var(--text-scale) * 48);
+   --h2-line-height: calc(var(--text-scale) * 60);
+   --h2-letter-spacing: -0.5px;
+
+   --h3-size: calc(var(--text-scale) * 40);
+   --h3-line-height: calc(var(--text-scale) * 48);
+   --h3-letter-spacing: 0px;
+
+   --h4-size: calc(var(--text-scale) * 32);
+   --h4-line-height: calc(var(--text-scale) * 40);
+   --h4-letter-spacing: 0px;
+
+   --h5-size: calc(var(--text-scale) * 28);
+   --h5-line-height: calc(var(--text-scale) * 40);
+   --h5-letter-spacing: 0.1px;
+
+   --title-size: calc(var(--text-scale) * 24);
+   --title-line-height: calc(var(--text-scale) * 28);
+   --title-letter-spacing: 0.15px;
+
+   --subtitle-size: calc(var(--text-scale) * 20);
+   --subtitle-line-height: calc(var(--text-scale) * 24);
+   --subtitle-letter-spacing: 0.15px;
+
+   --body-size: calc(var(--text-scale) * 18);
+   --body-line-height: calc(var(--text-scale) * 24);
+   --body-letter-spacing: 0.25px;
+
+   --standard-size: calc(var(--text-scale) * 16);
+   --standard-line-height: calc(var(--text-scale) * 24);
+   --standard-letter-spacing: 0.5px;
+
+   --caption-size: calc(var(--text-scale) * 14);
+   --caption-line-height: calc(var(--text-scale) * 20);
+   --caption-letter-spacing: 0.4px;
+
+   --overline-size: calc(var(--text-scale) * 12);
+   --overline-line-height: calc(var(--text-scale) * 18);
+   --overline-letter-spacing: 1.5px;
+
+   @include media(">desktop-l") {
+      --text-scale: 1.2px;
+   }
+   @include media("<desktop") {
+      --text-scale: 0.9px;
+   }
+   @include media("<=tablet") {
+      --text-scale: 0.86px;
+   }
+   @include media("<=mobile-l") {
+      --text-scale: 0.83px;
+   }
+
+   /* font weights */
+
+   --thin: 100;
+   --extraLight: 200;
+   --light: 300;
+   --regular: 400;
+   --medium: 500;
+   --semiBold: 600;
+   --bold: 700;
+   --extraBold: 800;
+   --heavy: 900;
+}

@@ -1,84 +1,10 @@
 // maybe import from google fonts here, or set @font-face declarations
 
-$font-primary: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
-   'Helvetica', 'Arial', sans-serif !default;
-$font-secondary: 'serif' !default;
-$font-code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-   'Monaco', monospace !default;
-
-:root {
-   /* typography variables */
-   --text-scale: 1px; // type offset
-
-   --h1-size: calc(var(--text-scale) * 60);
-   --h1-line-height: calc(var(--text-scale) * 70);
-   --h1-letter-spacing: -1px;
-
-   --h2-size: calc(var(--text-scale) * 48);
-   --h2-line-height: calc(var(--text-scale) * 60);
-   --h2-letter-spacing: -0.5px;
-
-   --h3-size: calc(var(--text-scale) * 40);
-   --h3-line-height: calc(var(--text-scale) * 48);
-   --h3-letter-spacing: 0px;
-
-   --h4-size: calc(var(--text-scale) * 32);
-   --h4-line-height: calc(var(--text-scale) * 40);
-   --h4-letter-spacing: 0px;
-
-   --h5-size: calc(var(--text-scale) * 28);
-   --h5-line-height: calc(var(--text-scale) * 40);
-   --h5-letter-spacing: 0.1px;
-
-   --title-size: calc(var(--text-scale) * 24);
-   --title-line-height: calc(var(--text-scale) * 28);
-   --title-letter-spacing: 0.15px;
-
-   --subtitle-size: calc(var(--text-scale) * 20);
-   --subtitle-line-height: calc(var(--text-scale) * 24);
-   --subtitle-letter-spacing: 0.15px;
-
-   --body-size: calc(var(--text-scale) * 18);
-   --body-line-height: calc(var(--text-scale) * 24);
-   --body-letter-spacing: 0.25px;
-
-   --standard-size: calc(var(--text-scale) * 16);
-   --standard-line-height: calc(var(--text-scale) * 24);
-   --standard-letter-spacing: 0.5px;
-
-   --caption-size: calc(var(--text-scale) * 14);
-   --caption-line-height: calc(var(--text-scale) * 20);
-   --caption-letter-spacing: 0.4px;
-
-   --overline-size: calc(var(--text-scale) * 12);
-   --overline-line-height: calc(var(--text-scale) * 18);
-   --overline-letter-spacing: 1.5px;
-
-   @include media('>desktop-l') {
-      --text-scale: 1.2px;
-   }
-   @include media('<desktop') {
-      --text-scale: 0.9px;
-   }
-   @include media('<=tablet') {
-      --text-scale: 0.86px;
-   }
-   @include media('<=mobile-l') {
-      --text-scale: 0.83px;
-   }
-
-   /* font weights */
-
-   --thin: 100;
-   --extraLight: 200;
-   --light: 300;
-   --regular: 400;
-   --medium: 500;
-   --semiBold: 600;
-   --bold: 700;
-   --extraBold: 800;
-   --heavy: 900;
-}
+$font-primary: "Open Sans", "Helvetica Neue Light", "Helvetica Neue",
+   "Helvetica", "Arial", sans-serif !default;
+$font-secondary: "serif" !default;
+$font-code: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+   "Monaco", monospace !default;
 
 /* text levels */
 
@@ -168,6 +94,10 @@ $font-code: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
    font-weight: var(--heavy);
 }
 
+.text-XS {
+   --text-offset: 1;
+   @extend %text-display-base;
+}
 .text-S {
    --text-offset: 1.5;
    @extend %text-display-base;
@@ -191,7 +121,7 @@ body {
    @extend .text-s; // standard
    font-family: $font-primary;
    color: var(--c-text-primary);
-   @if settings('use-font-smooth') {
+   @if settings("use-font-smooth") {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
    }
@@ -206,7 +136,6 @@ h6,
 .subtitle,
 form legend {
    margin-bottom: var(--space-xxs);
-   color: var(--c-title);
 }
 p,
 .copy {
@@ -274,6 +203,14 @@ strong {
 code {
    font-family: $font-code;
 }
+form legend {
+   color: var(--c-text-primary);
+}
+blockquote {
+   margin: var(--space-m) 0;
+   padding-left: var(--space-m);
+   border-left: 2px solid var(--c-secondary);
+}
 
 /* paragraph spacings */
 article {
@@ -285,5 +222,47 @@ article {
       &:last-of-type {
          margin-bottom: var(--space-l);
       }
+   }
+}
+
+/* on inverted background */
+.invert {
+   background-color: var(--c-bg-invert);
+   color: var(--c-text-primary-invert);
+   h1,
+   h2 {
+      color: var(--c-title-invert);
+   }
+   h3,
+   h4,
+   h5 {
+      color: var(--c-subtitle-invert);
+   }
+   h6,
+   .title {
+      color: var(--c-title-invert);
+   }
+   .subtitle {
+      color: var(--c-subtitle-invert);
+   }
+   p,
+   .copy {
+      .primary {
+         color: var(--c-text-primary-invert);
+      }
+      .secondary {
+         color: var(--c-text-secondary-invert);
+      }
+   }
+   small,
+   caption {
+      color: var(--c-caption-invert);
+   }
+   .overline {
+      color: var(--c-text-secondary-invert);
+   }
+   form,
+   legend {
+      color: var(--c-text-primary-invert);
    }
 }

@@ -1,6 +1,13 @@
-/* PRINT STYLES */
+/* VIEW STYLES */
 /// @author Riccardo-Zanutta
 /// @link https://github.dev/Riccardo-Zanutta/brick
+
+main {
+   margin: 0 var(--space-m);
+   .full-w {
+      margin: 0 calc(var(--space-m) * -1);
+   }
+}
 
 section {
    width: 100%;
@@ -34,7 +41,7 @@ section {
 .text-uppercase {
    text-transform: uppercase;
 }
-.full-width {
+.full-w {
    width: 100%;
 }
 .spacing {

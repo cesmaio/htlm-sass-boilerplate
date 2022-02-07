@@ -83,3 +83,25 @@ a {
       background-color: var(--c-primary-dark);
    }
 }
+
+/* on inverted background */
+.invert {
+   a {
+      color: var(--c-link-invert);
+      &:hover,
+      &:active {
+         color: var(--c-link-hover-invert);
+      }
+      &:visited {
+         color: var(--c-link-visited-invert);
+      }
+   }
+}
+
+/* interactive elements (elements that behave like links or buttons) */
+.interactive {
+   cursor: pointer;
+   -ms-touch-action: manipulation;
+   touch-action: manipulation;
+   white-space: nowrap;
+}

@@ -12,7 +12,7 @@
 .clearfix {
    *zoom: 1;
    &::after {
-      content: '';
+      content: "";
       display: table;
       line-height: 0;
       clear: both;
@@ -70,9 +70,10 @@
 /// @param {String} $base - base URL for the asset
 /// @param {String} $type - asset type folder (e.g. `fonts/`)
 /// @param {String} $path - asset path
-/// @return {Url} -
+/// @return {Url}
+
 @function asset($base, $type, $path) {
-   @return url($base+$type+$path);
+   @return url($base + $type + $path);
 }
 
 /// Returns URL to an image based on its path
@@ -81,7 +82,7 @@
 /// @return {Url}
 /// @require $base-url
 @function image($path, $base: $base-url) {
-   @return asset($base, 'images/', $path);
+   @return asset($base, "images/", $path);
 }
 
 /// Returns URL to a font based on its path
@@ -90,14 +91,14 @@
 /// @return {Url}
 /// @require $base-url
 @function font($path, $base: $base-url) {
-   @return asset($base, 'fonts/', $path);
+   @return asset($base, "fonts/", $path);
 }
 
 /// Slightly lighten a color
 /// @access public
 /// @param {Color} $color - color to tint
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color} -
+/// @return {Color} $
 @function tint($color, $percentage) {
    @return mix(white, $color, $percentage);
 }
@@ -106,7 +107,7 @@
 /// @access public
 /// @param {Color} $color - color to shade
 /// @param {Number} $percentage - percentage of `$color` in returned color
-/// @return {Color} -
+/// @return {Color} $
 @function shade($color, $percentage) {
    @return mix(black, $color, $percentage);
 }
@@ -176,20 +177,15 @@
 
 @mixin align-left {
    float: left;
-   margin-right: 1.5em;
-   margin-bottom: 1.5em;
 }
 
 @mixin align-right {
    float: right;
-   margin-left: 1.5em;
-   margin-bottom: 1.5em;
 }
 
 @mixin align-center {
    clear: both;
    @include center-block();
-   margin-bottom: 1.5em;
 }
 
 /// Vertically center elements with a dynamic size
@@ -198,7 +194,7 @@
 /// @param {String} $overflow [ellipsis]
 @mixin vertical-align {
    &:before {
-      content: '';
+      content: "";
       display: inline-block;
       vertical-align: middle;
       height: 100%;
