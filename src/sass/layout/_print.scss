@@ -3,6 +3,9 @@
 /// @link https://github.dev/Riccardo-Zanutta/brick
 
 @media print {
+   @page {
+      margin: 1cm 0.5cm;
+   }
    *,
    *:before,
    *:after,
